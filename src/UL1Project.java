@@ -17,7 +17,6 @@ public class UL1Project  {
         partyAmount = s.nextInt();
         tipAmount = tipPercentage/100.0;
         totalTipAmount = (noTaxBill*tipAmount);
-        totalTipAmount = (double) Math.round(totalTipAmount*100)/100.0;
         totalBill = totalTipAmount + noTaxBill;
         totalBill = Math.round(totalBill*100)/100.0;
         personTip = totalTipAmount/partyAmount;
