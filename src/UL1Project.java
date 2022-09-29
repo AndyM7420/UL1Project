@@ -11,9 +11,11 @@ public class UL1Project  {
         double personTip;
         double  eachPersonAmount;
         System.out.println("");
-        System.out.println("Hello User! Please input the bill amount, tip percentage as a whole number, and the number of people in the party ");
+        System.out.println("Hello User! Please input the bill amount");
         noTaxBill = s.nextDouble();
+        System.out.println("Please input the tip percentage as a whole number");
         tipPercentage = s.nextDouble();
+        System.out.println("input the number of people");
         partyAmount = s.nextInt();
         tipAmount = tipPercentage/100.0;
         totalTipAmount = (noTaxBill*tipAmount);
@@ -24,7 +26,9 @@ public class UL1Project  {
         totalTipAmount = (double) Math.round(totalTipAmount*100)/100.0;
         eachPersonAmount = totalBill/partyAmount;
         eachPersonAmount = Math.round(eachPersonAmount*100)/100.00;
-        System.out.print("Thank you. Your total tip amount is  $" + totalTipAmount + " Your total bill with tip is:  $" + totalBill + " Each person must pay  $" + personTip+ " each for tip. The total per person is: $" + eachPersonAmount);
+        System.out.println("Your total bill with tip is:  $"+ totalBill);
+        System.out.println("Each person must pay:  $" + personTip+ " each for tip");
+        System.out.println("The total per person is:  $"+ eachPersonAmount);
 
     }
 }
