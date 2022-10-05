@@ -1,6 +1,8 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 public class UL1Project  {
     public static void main(String[] args){
+        DecimalFormat dRound = new DecimalFormat("0.00");
         Scanner s = new Scanner(System.in);
         double noTaxBill;
         double tipPercentage;
@@ -26,9 +28,9 @@ public class UL1Project  {
         totalTipAmount = (double) Math.round(totalTipAmount*100)/100.0;
         eachPersonAmount = totalBill/partyAmount;
         eachPersonAmount = Math.round(eachPersonAmount*100)/100.00;
-        System.out.println("Your total bill with tip is:  $"+ totalBill);
-        System.out.println("Each person must pay:  $" + personTip+ " each for tip");
-        System.out.println("The total per person is:  $"+ eachPersonAmount);
+        System.out.println("Your total bill with tip is:  $"+ dRound.format(totalBill));
+        System.out.println("Each person must pay:  $" + dRound.format(personTip)+ " each for tip");
+        System.out.println("The total per person is:  $"+ dRound.format(eachPersonAmount));
 
     }
 }
